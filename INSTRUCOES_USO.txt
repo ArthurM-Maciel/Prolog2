@@ -1,0 +1,102 @@
+================================================================================
+INSTRUÇÕES PARA USAR O SISTEMA DE BIBLIOTECA PESSOAL
+================================================================================
+
+A interface do usuário precisa ser executada de forma INTERATIVA no SWI-Prolog.
+
+================================================================================
+PASSO A PASSO:
+================================================================================
+
+1. Abra o terminal e navegue até a pasta do projeto:
+   
+   cd "/Users/arthurmmaciel/Documents/Linguagens de programação /Prolog2"
+
+2. Inicie o SWI-Prolog:
+   
+   swipl
+
+3. Dentro do Prolog (você verá o prompt ?-), carregue o arquivo:
+   
+   ?- [biblioteca_pessoal].
+
+4. Inicie a interface:
+   
+   ?- iniciar.
+
+5. Agora você verá o menu e poderá interagir digitando os números das opções.
+
+================================================================================
+EXEMPLO DE USO:
+================================================================================
+
+$ swipl
+Welcome to SWI-Prolog...
+
+?- [biblioteca_pessoal].
+true.
+
+?- iniciar.
+
+========================================
+   SISTEMA DE GERENCIAMENTO DE BIBLIOTECA
+========================================
+
+1. Consultar livros por autor
+2. Consultar livros antigos
+3. Verificar disponibilidade de livro
+4. Consultar livros emprestados por pessoa
+5. Inserir novo livro
+6. Emprestar livro
+7. Devolver livro
+8. Listar todos os livros
+9. Listar todos os empréstimos
+0. Sair
+
+Escolha uma opção: 8
+
+[O sistema listará todos os livros]
+
+Pressione Enter para continuar...
+[Pressione Enter]
+
+[O menu aparecerá novamente]
+
+Escolha uma opção: 0
+
+Saindo do sistema...
+
+?- halt.
+
+================================================================================
+USANDO CONSULTAS DIRETAS (SEM INTERFACE):
+================================================================================
+
+Se preferir usar as consultas diretamente sem a interface:
+
+?- [biblioteca_pessoal].
+
+?- livros_por_autor('Machado de Assis', Titulo).
+Titulo = 'Dom Casmurro'.
+
+?- disponivel('Dom Casmurro').
+true.
+
+?- livros_antigos(1950, Titulo).
+Titulo = 'A Arte da Guerra' ;
+Titulo = '1984' ;
+Titulo = 'Dom Casmurro' ;
+Titulo = 'O Pequeno Príncipe'.
+
+================================================================================
+IMPORTANTE:
+================================================================================
+
+- A interface NÃO funciona quando executada de forma não-interativa
+- Você DEVE iniciar o SWI-Prolog primeiro com 'swipl'
+- Depois carregue o arquivo com '[biblioteca_pessoal].'
+- Então execute 'iniciar.' para ver o menu
+- Para sair do Prolog, digite 'halt.' ou pressione Ctrl+D
+
+================================================================================
+
